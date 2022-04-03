@@ -1,7 +1,8 @@
 import React from "react";
+/*Styles*/
 import styles from "./Header.module.css";
 
-/*import icons*/
+/*Icons*/
 import backIcon from "../../assets/images/icons/back-arrow.png";
 import exitIcon from "../../assets/images/icons/switch.png";
 

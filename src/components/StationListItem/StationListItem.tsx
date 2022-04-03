@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+
+/*Styles*/
 import styles from "./StationListItem.module.css";
+
+/*Components*/
 import StationListItemDetails from "./StationListItemDetails";
+
+/*Types*/
 import { RadioStation } from "../../types";
+
+/*Store/Context/Actions*/
 import { useRadioStationContext } from "../../store";
 import { setSelectedStation } from "../../store/actions";
 

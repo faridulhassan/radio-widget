@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
-import styles from "./StationList.module.css";
-import StationListItem from "../StationListItem/StationListItem";
 
+/*Styles*/
+import styles from "./StationList.module.css";
+
+/*Components*/
+import StationListItem from "../StationListItem/StationListItem";
 import { Loader } from "../Loader/Loader";
+
+/*Store/Context/Actions*/
 import { useRadioStationContext } from "../../store";
+import { setLoadingState, setStations } from "../../store/actions";
+
+/*Utils*/
 import { getStations } from "../../utils";
-import {
-  SET_LOADING_STATE,
-  SET_STATIONS,
-  setLoadingState,
-  setStations,
-} from "../../store/actions";
 
 const StationList: React.FC<{}> = (props) => {
   const { state, dispatch } = useRadioStationContext();
@@ -18,6 +20,7 @@ const StationList: React.FC<{}> = (props) => {
   useEffect(() => {
     dispatch(setLoadingState(true));
 
+    /*Load stations data with fetch api*/
     async function loadStations() {
       const stations = await getStations();
       dispatch(setLoadingState(false));

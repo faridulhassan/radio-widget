@@ -1,14 +1,14 @@
 import React from "react";
+
+/*Styles*/
 import styles from "./StationListItem.module.css";
 
+/*Types*/
 import { RadioStation } from "../../types";
 
-/*Import icons*/
+/*Icons*/
 import plusIcon from "../../assets/images/icons/plus.png";
 import minusIcon from "../../assets/images/icons/minus.png";
-
-/*Import station image*/
-import station_1 from "../../assets/images/stations/station_1.jpg";
 
 const StationListItemDetails: React.FC<{
   station: RadioStation;

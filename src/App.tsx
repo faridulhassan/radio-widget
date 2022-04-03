@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./App.module.css";
 import { WrapperContainer } from "./components/WrapperContainer/WrapperContainer";
 import RadioStationProvider from "./store";
 import reducer from "./store/reducer";

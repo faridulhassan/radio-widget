@@ -1,4 +1,4 @@
-/*Station item*/
+/*Station list item*/
 .item {
     padding: 26px 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.10196078431372549);
@@ -64,5 +64,5 @@
     height: 280px;
     opacity: 1;
     margin-top: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
