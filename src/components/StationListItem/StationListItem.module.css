@@ -14,9 +14,12 @@
     justify-content: space-between;
     cursor: pointer;
     color: #a2abbd;
-    font-size: 44px;
     position: relative;
     z-index: 2;
+}
+
+.title, .frequency {
+    font-size: 44px;
 }
 
 .title {
@@ -36,7 +39,7 @@
     margin-bottom: 0;
     height: 0;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
 }
 
 .details-info .station-img {
@@ -57,7 +60,7 @@
     display: block;
 }
 
-.item.expanded .details-info {
+.details-info.expanded {
     height: 280px;
     opacity: 1;
     margin-top: 14px;

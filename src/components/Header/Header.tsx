@@ -1,18 +1,22 @@
-import React from 'react'
-import styles from './Header.module.css'
+import React from "react";
+import styles from "./Header.module.css";
 
 /*import icons*/
-import backIcon from '../../assets/images/icons/back-arrow.png'
-import exitIcon from '../../assets/images/icons/switch.png'
+import backIcon from "../../assets/images/icons/back-arrow.png";
+import exitIcon from "../../assets/images/icons/switch.png";
 
-const Header: React.FC<{}> = props => {
-    return (
-        <div className={styles.header}>
-            <button title="Back"><img src={backIcon} alt="Back"/></button>
-            <h1 className={styles.title}>Stations</h1>
-            <button title="Exit"><img src={exitIcon} alt="Exit"/></button>
-        </div>
-    );
+const Header: React.FC<{}> = (props) => {
+  return (
+    <div className={styles.header}>
+      <button title="Back">
+        <img src={backIcon} alt="Back" />
+      </button>
+      <h1 className={styles.title}>Stations</h1>
+      <button title="Exit">
+        <img src={exitIcon} alt="Exit" />
+      </button>
+    </div>
+  );
 };
 
-export default Header
+export default Header;
