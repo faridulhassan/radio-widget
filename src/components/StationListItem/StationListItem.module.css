@@ -41,6 +41,7 @@
     height: 0;
     opacity: 0;
     transition: all 0.5s ease-out;
+    overflow: hidden;
 }
 
 .details-info .station-img {
@@ -66,4 +67,5 @@
     opacity: 1;
     margin-top: 14px;
     margin-bottom: 45px;
+    overflow: visible;
 }
