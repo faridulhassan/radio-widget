@@ -1,14 +1,14 @@
 import React from "react";
 import { WrapperContainer } from "./components/WrapperContainer/WrapperContainer";
-import RadioStationProvider from "./store";
+import StationProvider from "./store";
 import reducer from "./store/reducer";
 
 function App() {
   return (
     <div className="App">
-      <RadioStationProvider reducer={reducer}>
+      <StationProvider reducer={reducer}>
         <WrapperContainer />
-      </RadioStationProvider>
+      </StationProvider>
     </div>
   );
 }

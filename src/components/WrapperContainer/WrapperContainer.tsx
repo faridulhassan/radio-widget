@@ -8,7 +8,7 @@ import Header from "../Header/Header";
 import StationList from "../StationList/StationList";
 import Footer from "../Footer/Footer";
 
-export const WrapperContainer: React.FC<{}> = (props) => {
+export const WrapperContainer = (): JSX.Element => {
   return (
     <div className={styles.container}>
       <Header />

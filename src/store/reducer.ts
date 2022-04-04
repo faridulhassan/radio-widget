@@ -1,5 +1,5 @@
 /*Types*/
-import { Action, RadioStationState } from "../types";
+import { Action, StationState } from "../types";
 
 /*Store/Context/Actions*/
 import {
@@ -8,8 +8,11 @@ import {
   SET_STATIONS,
 } from "./actions";
 
-/*Main reducer*/
-export default function reducer(state: RadioStationState, action: Action) {
+/*Reducer*/
+export default function reducer(
+  state: StationState,
+  action: Action
+): StationState {
   switch (action.type) {
     case SET_LOADING_STATE: {
       return {

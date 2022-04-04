@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 
 /*Styles*/
 import styles from "./StationListItem.module.css";
@@ -7,18 +7,19 @@ import styles from "./StationListItem.module.css";
 import StationListItemDetails from "./StationListItemDetails";
 
 /*Types*/
-import { RadioStation } from "../../types";
+import { Station } from "../../types";
 
 /*Store/Context/Actions*/
-import { useRadioStationContext } from "../../store";
+import { useStationContext } from "../../store";
 import { setSelectedStation } from "../../store/actions";
 
-const StationListItem: React.FC<{ station: RadioStation }> = ({
+const StationListItem: React.FC<{ station: Station }> = ({
   station,
 }): JSX.Element => {
-  const { state, dispatch } = useRadioStationContext();
+  const { state, dispatch } = useStationContext();
 
-  function onStationClick() {
+  function onStationClick(event: MouseEvent) {
+    event.preventDefault();
     const isCurrentStationSelected = station.id === state.selectedStation?.id;
     dispatch(setSelectedStation(isCurrentStationSelected ? null : station));
   }

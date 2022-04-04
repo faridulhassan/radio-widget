@@ -5,17 +5,17 @@ import styles from "./StationList.module.css";
 
 /*Components*/
 import StationListItem from "../StationListItem/StationListItem";
-import { Loader } from "../Loader/Loader";
+import Loader from "../Loader/Loader";
 
 /*Store/Context/Actions*/
-import { useRadioStationContext } from "../../store";
+import { useStationContext } from "../../store";
 import { setLoadingState, setStations } from "../../store/actions";
 
 /*Utils*/
 import { getStations } from "../../utils";
 
-const StationList: React.FC<{}> = (props) => {
-  const { state, dispatch } = useRadioStationContext();
+const StationList = (): JSX.Element => {
+  const { state, dispatch } = useStationContext();
 
   useEffect(() => {
     dispatch(setLoadingState(true));
@@ -31,7 +31,7 @@ const StationList: React.FC<{}> = (props) => {
   }, []);
 
   return (
-    <div className={styles["list-wrapper"]}>
+    <div className={styles["list-wrapper"]} data-testid="station-list-wrapper">
       {state.loading ? (
         <Loader />
       ) : (

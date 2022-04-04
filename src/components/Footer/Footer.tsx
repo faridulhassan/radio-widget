@@ -4,12 +4,12 @@ import React from "react";
 import styles from "./Footer.module.css";
 
 /*Store/Context/Actions*/
-import { useRadioStationContext } from "../../store";
+import { useStationContext } from "../../store";
 
-const Footer: React.FC<{}> = (props) => {
-  const { state } = useRadioStationContext();
+const Footer = (): JSX.Element => {
+  const { state } = useStationContext();
   return (
-    <div className={styles.footer}>
+    <footer role="contentinfo" className={styles.footer}>
       {state.selectedStation && (
         <>
           <div className={styles["currently-playing-label"]}>
@@ -20,8 +20,8 @@ const Footer: React.FC<{}> = (props) => {
           </h2>
         </>
       )}
-    </div>
+    </footer>
   );
 };
 
-export default React.memo(Footer);
+export default Footer;

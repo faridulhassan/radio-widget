@@ -1,18 +1,18 @@
-/*Single Station */
 import React from "react";
 
-export interface RadioStation {
+/*Single Station */
+export interface Station {
   id: number;
   name: string;
   image: string;
   frequency: string;
 }
 
-/*Radio Station State*/
-export interface RadioStationState {
-  stations: RadioStation[];
+/*Station State*/
+export interface StationState {
+  stations: Station[];
   loading: boolean;
-  selectedStation: RadioStation | null;
+  selectedStation: Station | null;
 }
 
 /*Action*/
@@ -21,14 +21,20 @@ export interface Action {
   payload?: any;
 }
 
-/*Radio Station Provider Props*/
-export interface RadioStationProviderProps {
+/*Station Provider Props*/
+export interface StationProviderProps {
   children?: JSX.Element | JSX.Element[];
-  reducer: (state: RadioStationState, action: Action) => RadioStationState;
+  reducer: (state: StationState, action: Action) => StationState;
 }
 
-/*Radio Station Context*/
-export interface RadioStationContextType {
-  state: RadioStationState;
+/*Station Context*/
+export interface StationContextType {
+  state: StationState;
   dispatch: React.Dispatch<Action>;
+}
+
+/*Station List Item Details Props*/
+export interface StationListItemDetailsProps {
+  station: Station;
+  isOpened?: boolean;
 }

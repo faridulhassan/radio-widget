@@ -1,11 +1,14 @@
-import { RadioStation } from "../types";
+/*Types*/
+import { Station } from "../types";
 
 /*Stations api url*/
 const stationsApiUrl = "./stations/stations.json";
 
-/*Load stations*/
-export const getStations = (): Promise<RadioStation[]> => {
+/*Load stations from api*/
+export const getStations = (): Promise<Station[]> => {
   return fetch(stationsApiUrl)
-    .then((stations) => stations.json())
+    .then((stations) => {
+      return stations.json();
+    })
     .catch((error) => error);
 };
