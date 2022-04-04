@@ -25,12 +25,16 @@ const StationListItem: React.FC<{ station: Station }> = ({
   }
 
   return (
-    <li className={styles.item}>
+    <li className={styles.item} data-testid="station-list-item">
       <StationListItemDetails
         station={station}
         isOpened={station.id === state.selectedStation?.id}
       />
-      <div className={styles["clickable-info"]} onClick={onStationClick}>
+      <div
+        className={styles["clickable-info"]}
+        onClick={onStationClick}
+        data-testid="clickable-info"
+      >
         <h3 className={styles.title}>{station.name}</h3>
         <div className={styles.frequency}>{station.frequency}</div>
       </div>
